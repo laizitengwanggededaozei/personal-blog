@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>技术人生 - 个人博客</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- jQuery CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Swiper轮播图插件 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
+</head>
+<body>
+<!-- 顶部导航 -->
+<header class="header">
+  <nav class="navbar">
+    <div class="nav-brand">
+      <h1>技术人生</h1>
+    </div>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="active">首页</a></li>
+      <li><a href="about.html">关于</a></li>
+      <li><a href="admin.html">管理</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- 搜索栏 -->
+<section class="search-section">
+  <div class="container">
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="搜索文章...">
+      <button id="search-btn">搜索</button>
+    </div>
+    <div class="category-filter">
+      <button class="filter-btn active" data-category="all">全部</button>
+      <button class="filter-btn" data-category="技术">技术</button>
+      <button class="filter-btn" data-category="生活">生活</button>
+      <button class="filter-btn" data-category="思考">思考</button>
+    </div>
+  </div>
+</section>
+
+<!-- 精选文章轮播 -->
+<section class="featured-section">
+  <div class="container">
+    <h2>精选文章</h2>
+    <div class="swiper featured-swiper">
+      <div class="swiper-wrapper" id="featured-posts">
+        <!-- 轮播内容通过JavaScript动态生成 -->
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 文章列表 -->
+<main class="main-content">
+  <div class="container">
+    <div class="content-wrapper">
+      <!-- 文章列表 -->
+      <section class="posts-section">
+        <div id="posts-container">
+          <!-- 文章列表通过JavaScript动态生成 -->
+        </div>
+
+        <!-- 分页 -->
+        <div class="pagination" id="pagination">
+          <!-- 分页按钮通过JavaScript生成 -->
+        </div>
+
+        <!-- 加载更多按钮 -->
+        <div class="load-more">
+          <button id="load-more-btn">加载更多</button>
+        </div>
+      </section>
+
+      <!-- 侧边栏 -->
+      <aside class="sidebar">
+        <!-- 博客统计 -->
+        <div class="widget stats-widget">
+          <h3>博客统计</h3>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span class="stat-number" id="total-posts">0</span>
+              <span class="stat-label">文章总数</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" id="total-comments">0</span>
+              <span class="stat-label">评论总数</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" id="total-likes">0</span>
+              <span class="stat-label">点赞总数</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" id="total-views">0</span>
+              <span class="stat-label">访问总数</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 热门标签 -->
+        <div class="widget tags-widget">
+          <h3>热门标签</h3>
+          <div class="tags-cloud" id="tags-cloud">
+            <!-- 标签通过JavaScript生成 -->
+          </div>
+        </div>
+
+        <!-- 最新评论 -->
+        <div class="widget comments-widget">
+          <h3>最新评论</h3>
+          <div class="recent-comments" id="recent-comments">
+            <!-- 最新评论通过JavaScript生成 -->
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<!-- 返回顶部按钮 -->
+<button id="back-to-top" class="back-to-top">
+  <span>↑</span>
+</button>
+
+<!-- 主题切换按钮 -->
+<button id="theme-toggle" class="theme-toggle">
+  <span class="sun">☀</span>
+  <span class="moon">🌙</span>
+</button>
+
+<!-- 底部 -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 技术人生博客. All rights reserved.</p>
+    <p>Powered by JavaScript & jQuery</p>
+  </div>
+</footer>
+
+<!-- 消息提示框 -->
+<div id="message-container"></div>
+
+<!-- JavaScript文件引入 -->
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
